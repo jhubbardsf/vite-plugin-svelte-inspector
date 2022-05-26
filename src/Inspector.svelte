@@ -1,6 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   export let enabled = true;
+  export let zIndex = 'auto';
   let open;
   let x;
   let y;
@@ -41,7 +42,7 @@
   }
 </script>
 
-<div class="toggle" class:enabled on:click={() => (enabled = !enabled)}>
+<div class="toggle" class:enabled on:click={() => (enabled = !enabled)} style="--z-index: {zIndex};">
   <img
     src="https://github.com/tanhauhau/vite-plugin-svelte-inspector/blob/master/src/logo.png?raw=true"
     alt="logo"
@@ -82,7 +83,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    z-index: 999;
+    z-index: var(--z-index);
   }
   img {
     width: 80%;
