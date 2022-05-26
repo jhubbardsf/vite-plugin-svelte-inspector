@@ -3,7 +3,7 @@
 
 ![logo](./src/logo.png)
 
-# vite-plugin-svelte-inspector
+# vite-plugin-svelte-inspector 
 
 Play with the [LIVE DEMO](https://stackblitz.com/edit/sveltejs-kit-template-default-gnpnjl).
 
@@ -21,6 +21,7 @@ npm install vite-plugin-svelte-inspector -D
 ```
 
 ## Usage
+In this fork you can add an optional zIndex parameter to change the z-index on the enable bottom.
 
 ### Add it to your SvelteKit project
 
@@ -35,7 +36,7 @@ const config = {
   kit: {
     // ...
     vite: {
-      plugins: [Inspector()],
+      plugins: [Inspector({ enabled: true, zIndex: 999 })],
     },
   },
 };
