@@ -11,13 +11,13 @@ Play with the [LIVE DEMO](https://stackblitz.com/edit/sveltejs-kit-template-defa
 
 ```sh
 # pnpm
-pnpm install vite-plugin-svelte-inspector -D
+pnpm install @jhubbardsf/vite-plugin-svelte-inspector -D
 
 # yarn
-yarn add vite-plugin-svelte-inspector -D
+yarn add @jhubbardsf/vite-plugin-svelte-inspector -D
 
 # npm
-npm install vite-plugin-svelte-inspector -D
+npm install @jhubbardsf/vite-plugin-svelte-inspector -D
 ```
 
 ## Usage
@@ -29,7 +29,7 @@ In this fork you can add an optional zIndex parameter to change the z-index on t
 // filename: svelte.config.js
 
 // for vue2
-import Inspector from 'vite-plugin-svelte-inspector';
+import Inspector from '@jhubbardsf/vite-plugin-svelte-inspector';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
