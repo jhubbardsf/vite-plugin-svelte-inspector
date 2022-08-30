@@ -23,6 +23,10 @@ npm install @jhubbardsf/vite-plugin-svelte-inspector -D
 ## Usage
 In this fork you can add an optional zIndex parameter to change the z-index on the enable bottom.
 
+Also, meta + shift (command+shift on Mac) will enable/disable the inspector.
+
+```js
+
 ### Add it to your SvelteKit project
 
 ```js
@@ -36,7 +40,7 @@ const config = {
   kit: {
     // ...
     vite: {
-      plugins: [Inspector({ enabled: true, zIndex: 999 })],
+      plugins: [Inspector({ enabled: false, zIndex: 999 })],
     },
   },
 };

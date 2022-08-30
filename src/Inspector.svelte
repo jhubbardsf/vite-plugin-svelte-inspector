@@ -9,14 +9,15 @@
   $: ({ file, line, column } = parse(open));
 
   onMount(() => {
-    console.log("onmount plugin");
+    console.log("SvelteInspector Mounted");
     document.body.addEventListener('mouseover', mouseover);
     document.body.addEventListener('mousemove', mousemove);
     document.body.addEventListener('click', click);
 
     const handleKeyboard = ({ repeat, metaKey, shiftKey }) => {
-      if (repeat) return
-      if ((metaKey && shiftKey)) console.log('Keys were pressed')
+      if ((metaKey && shiftKey)) {
+        enabled = !enabled;
+      }
     }
 
     document.addEventListener('keydown', handleKeyboard)
@@ -81,8 +82,8 @@
   .toggle {
     border-radius: 50%;
     position: fixed;
-    top: 10px;
-    right: 10px;
+    bottom: 20px;
+    right: 20px;
     height: 50px;
     width: 50px;
     background: white;
