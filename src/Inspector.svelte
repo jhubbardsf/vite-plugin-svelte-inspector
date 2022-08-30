@@ -9,9 +9,17 @@
   $: ({ file, line, column } = parse(open));
 
   onMount(() => {
+    console.log("onmount plugin");
     document.body.addEventListener('mouseover', mouseover);
     document.body.addEventListener('mousemove', mousemove);
     document.body.addEventListener('click', click);
+
+    const handleKeyboard = ({ repeat, metaKey, shiftKey }) => {
+      if (repeat) return
+      if ((metaKey && shiftKey)) console.log('Keys were pressed')
+    }
+
+    document.addEventListener('keydown', handleKeyboard)
 
     return () => {
       document.body.removeEventListener('mouseover', mouseover);
