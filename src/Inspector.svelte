@@ -59,7 +59,7 @@
 </div>
 
 {#if enabled && file}
-  <ul class="overlay" style:left="{x + 10}px" style:top="{y + 10}px">
+  <ul class="overlay" style:left="{x + 10}px" style:top="{y + 10}px" style="--z-index: {zIndex};">
     <li>file: {'<'}{file}{'>'}</li>
     <li>line: {line}</li>
     <li>column: {column}</li>
@@ -75,6 +75,7 @@
     padding: 10px;
     border-radius: 5px;
     text-align: left;
+    z-index: var(--z-index);
   }
   ul {
     list-style-type: none;

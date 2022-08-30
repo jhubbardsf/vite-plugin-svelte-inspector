@@ -1,7 +1,6 @@
-> If you are using `vite-plugin-svelte`, use the `inspector` options instead:
-> https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/config.md#inspector
 
-![logo](./src/logo.png)
+
+![logo](https://github.com/tanhauhau/vite-plugin-svelte-inspector/blob/master/src/logo.png?raw=true)
 
 # vite-plugin-svelte-inspector 
 
@@ -51,3 +50,6 @@ export default config;
 ### License
 
 [MIT](/LICENSE)
+
+> If you are using Svelte (haven't got it to work with sveltekit) `vite-plugin-svelte`, use the `inspector` options instead:
+> https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/config.md#inspector
