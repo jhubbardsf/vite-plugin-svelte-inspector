@@ -24,27 +24,18 @@ In this fork you can add an optional zIndex parameter to change the z-index on t
 
 Also, meta + shift (command+shift on Mac) will enable/disable the inspector.
 
+
+### Add it to the plugins array in your SvelteKit vite.config file.
+
 ```js
-
-### Add it to your SvelteKit project
-
-```js
-// filename: svelte.config.js
-
-// for vue2
+// filename: vite.config.js
 import Inspector from '@jhubbardsf/vite-plugin-svelte-inspector';
 
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
-  kit: {
-    // ...
-    vite: {
-      plugins: [Inspector({ enabled: false, zIndex: 999 })],
-    },
-  },
-};
 
-export default config;
+/** @type {import('vite').UserConfig} */
+const config = {
+	plugins: [Inspector({ enabled: false, zIndex: 999 })],
+}
 ```
 
 ### License

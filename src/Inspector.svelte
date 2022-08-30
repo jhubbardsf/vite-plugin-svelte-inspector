@@ -26,6 +26,7 @@
       document.body.removeEventListener('mouseover', mouseover);
       document.body.removeEventListener('mousemove', mousemove);
       document.body.removeEventListener('click', click);
+      document.addEventListener('keydown', handleKeyboard)
     };
   });
 
